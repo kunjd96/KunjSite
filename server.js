@@ -12,6 +12,9 @@ app.get('/*' , (req , res)=>{
 
    res.sendFile(path.join(__dirname));
 
-})
+});
+app.get('*',(req,res) =>{
+    res.sendFile(path.join(__dirname));
+});
 
 app.listen(port, console.log(`server running in ${process.env.NODE_ENV} mode on port ${port}`))
